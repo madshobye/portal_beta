@@ -2,7 +2,7 @@ let version = "v0_0001_001";
 let statusMsg = "";
 const LIBRARIES = [
   // Example: p5.sound (remove or add your own)
-  "https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/addons/p5.sound.min.js",
+  "https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js",
   // "https://cdn.jsdelivr.net/npm/some-lib@1.0.0/dist/some-lib.min.js",
 ];
 
@@ -44,7 +44,7 @@ function loadScript(url) {
   return new Promise((resolve, reject) => {
     // If the same URL was already inserted, resolve immediately
     if ([...document.scripts].some(s => s.src === url)) return resolve(url);
-
+    console.log(url);
     const s = document.createElement("script");
     s.src = url;
     s.async = true;
